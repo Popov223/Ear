@@ -1,0 +1,39 @@
+{
+  "id": "/",
+  "name": "The Live Ear - Realtime Mic Monitor",
+  "short_name": "The Live Ear",
+  "description": "Live microphone feed streaming to Bluetooth or speakers in uncompressed stereo with 12-band EQ, 0 to +15dB gain, and 0-15000ms delay.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0e17",
+  "theme_color": "#0a0e17",
+  "categories": ["utilities", "music", "audio"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

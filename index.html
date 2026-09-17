@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>The Live Ear</title>
+    <meta name="description" content="Real-time microphone audio streamer to Bluetooth or speakers in uncompressed stereo quality with 12-band EQ, 0 to +15dB gain, mono switch, and 0-15,000ms delay." />
+    <meta property="og:title" content="The Live Ear" />
+    <meta property="og:description" content="Real-time microphone audio streamer to Bluetooth or speakers in uncompressed stereo quality with 12-band EQ, 0 to +15dB gain, mono switch, and 0-15,000ms delay." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0e17" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="The Live Ear" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then(function(reg) {
+              console.log('The Live Ear SW registered:', reg.scope);
+            })
+            .catch(function(err) {
+              console.warn('The Live Ear SW register err:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+

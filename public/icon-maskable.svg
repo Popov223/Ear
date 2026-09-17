@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="earGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Full bleed background for Android adaptive/maskable icons -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+  
+  <!-- Artwork scaled down to fit inside 80% safe zone (center 400x400) -->
+  <g transform="translate(51, 51) scale(0.8)">
+    <!-- Soundwave pulses -->
+    <path d="M 330 170 A 100 100 0 0 1 330 342" fill="none" stroke="#38bdf8" stroke-width="18" stroke-linecap="round" opacity="0.85" />
+    <path d="M 376 130 A 160 160 0 0 1 376 382" fill="none" stroke="#818cf8" stroke-width="16" stroke-linecap="round" opacity="0.6" />
+    <path d="M 422 90 A 220 220 0 0 1 422 422" fill="none" stroke="#a78bfa" stroke-width="14" stroke-linecap="round" opacity="0.35" />
+    <!-- Ear stylized pro audio -->
+    <path d="M 230 110 C 140 110 100 180 100 250 C 100 340 160 410 220 410 C 265 410 286 380 270 350 C 255 320 225 330 200 320 C 165 305 160 250 190 230 C 220 210 250 225 250 200 C 250 170 215 170 195 180" fill="none" stroke="url(#earGrad)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+    <!-- Ear center monitor dot / bluetooth beacon -->
+    <circle cx="215" cy="265" r="16" fill="#38bdf8" />
+  </g>
+</svg>
